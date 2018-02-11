@@ -19,4 +19,7 @@ Meteor.methods({
 	removeTask: (taskId) => {
 		CollectionOfTasks.remove(taskId);
 	},
+	removeAll: () => {
+		CollectionOfTasks.remove({});
+	},
 });

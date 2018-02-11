@@ -63,3 +63,34 @@ Template.tasks.events(
 );
 
 /* ##------------------------## */
+
+/* ## --- --- Vue-demo --- --- ## */
+// add akryum:vue && akryum:vue-component packages with:
+// "meteor add akryum:vue akryum:vue-component"
+
+import {Vue} from 'meteor/akryum:vue';
+// import Vue from 'vue'; // works as well if you install vue with npm
+import TasksCounter from './TasksCounter';
+
+// Declarative subscriptions and meteor reactive data
+// meteor npm install --save vue-meteor-tracker
+
+import VueMeteorTracker from 'vue-meteor-tracker';
+Vue.use(VueMeteorTracker);
+
+// The rendered callback of the vue_demo template
+Template.vue_demo.rendered = () => {
+	return new Vue({
+		el: '#vue-demo',
+		render(createElement) {
+			return createElement(TasksCounter, {
+				props: {
+					text: 'Current number of tasks:'
+				}
+			})
+		}
+	});
+}
+
+/* ##------------------------## */
+export default CollectionOfTasks;

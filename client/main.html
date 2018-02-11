@@ -3,14 +3,17 @@
 </head>
 
 <body>
-
 {{> container}}
-
 </body>
+
+<template name="vue_demo">
+  <div id="vue-demo"></div>
+</template>
 
 <template name="container">
   <div class="container">
     <header>
+      {{> vue_demo}}
       <h1>{{heading}}</h1>
       <form class="new-task">
         <input type="text" name="text" placeholder="Type to add new tasks" />
