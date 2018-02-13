@@ -1,6 +1,8 @@
 <template name="container">
     <div class="container">
         <header>
+            <!-- We just display some messag passed from Vue to blaze -->
+            <p>Message from Vue: {{message}}</p>
             <h1>{{heading}}</h1>
             <form class="new-task">
                 <input type="text" name="text" placeholder="Type to add new tasks" />

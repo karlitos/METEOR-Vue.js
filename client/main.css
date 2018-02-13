@@ -17,6 +17,10 @@ body {
     font-size: 14px;
 }
 
+body > div {
+    height: 100%;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
